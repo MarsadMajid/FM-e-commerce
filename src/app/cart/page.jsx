@@ -3,6 +3,8 @@
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { useState } from 'react';
+import Navbar from '../(components)/Navbar/page';
+import Fotter from '../(components)/Fotter/page';
 
 const Cart = () => {
   const [cartItems, setCartItems] = useState([
@@ -46,6 +48,8 @@ const Cart = () => {
   };
 
   return (
+    <>
+    <Navbar/>
     <div className="min-h-screen bg-gray-100">
       <div className="container mx-auto p-8">
         <h1 className="text-3xl font-semibold mb-8">Shopping Cart</h1>
@@ -105,6 +109,8 @@ const Cart = () => {
         </div>
       </div>
     </div>
+    <Fotter/>
+    </>
   );
 };
 
